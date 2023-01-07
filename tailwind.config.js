@@ -19,5 +19,5 @@ module.exports = {
     rtl: false,
     prefix: "",
     darkTheme: "dracula",
-  },
+  }
 }

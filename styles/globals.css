@@ -20,6 +20,7 @@
   padding: 2rem;
 }
 
-html {
+html, body {
   scroll-behavior: smooth;
+  font-family: 'Rubik', sans-serif;
 }
