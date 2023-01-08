@@ -16,7 +16,7 @@ export function SecondSection() {
         <p className="mx-auto max-w-lg">
           Gryt is an{' '}
           <Link
-            href="https://github.com/Gryta-Krutt/home"
+            href="https://github.com/Gryta-Krutt"
             target="_blank"
             className="link link-primary"
           >
