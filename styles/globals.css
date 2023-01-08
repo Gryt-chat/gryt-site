@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+@media screen and (max-width: 320px) {
+  #__next {
+    display: flex
+  }
+}
+
 .tooltip {
   --tooltip-offset:calc(100% + 6px + var(--tooltip-tail,0px));
   --tooltip-tail-offset: calc(100% + 6px - var(--tooltip-tail));

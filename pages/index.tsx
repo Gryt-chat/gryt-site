@@ -5,15 +5,23 @@ import { Navbar } from '../components/Navbar';
 import { SecondSection } from '../components/SecondSection';
 import { ThirdSection } from '../components/ThirdSection';
 
-export default function Home() {
+export function getServerSideProps(context: any) {
+  return {
+    props: {
+      uaString: context.req.headers['user-agent'],
+    },
+  };
+}
+
+export default function Home({ uaString }: { uaString: string }) {
   return (
     <>
       <Navbar />
 
-      <Hero />
+      <Hero uaString={uaString} />
       <SecondSection />
       <ThirdSection />
-      <DownloadSection />
+      <DownloadSection uaString={uaString} />
 
       <Footer />
     </>
