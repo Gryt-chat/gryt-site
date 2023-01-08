@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import DownloadSection from '../components/DownloadSection';
 import Footer from '../components/Footer';
 import { Hero } from '../components/Hero';
@@ -16,6 +17,9 @@ export function getServerSideProps(context: any) {
 export default function Home({ uaString }: { uaString: string }) {
   return (
     <>
+      <Head>
+        <title>Gryt</title>
+      </Head>
       <Navbar />
 
       <Hero uaString={uaString} />
