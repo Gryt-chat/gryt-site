@@ -54,7 +54,7 @@ export function Hero({ uaString }: { uaString: string }) {
               brand new
             </span>{' '}
             <br />
-            chat-platform
+            chat platform
           </h1>
           <p className="py-6">
             Tired of being limited to 720p when streaming to friends? Wish to be
