@@ -1,13 +1,42 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { MdOutlineFileDownload } from 'react-icons/md';
-import { selfHostLink } from '../config/constants';
+import { downloadLinks, selfHostLink } from '../config/constants';
+import { useUserAgent } from 'next-useragent';
+import { useEffect, useState } from 'react';
+import { download } from '../utils/downloadHelper';
 
-export function Hero() {
-  let agent = '';
-  if (typeof window !== 'undefined') {
-    agent = window.navigator.userAgent;
-  }
+function DownloadButton({ os }: { os: string }) {
+  const [d, setD] = useState('');
+
+  useEffect(() => {
+    const a = downloadLinks[os];
+    if (a) setD(a);
+  }, []);
+
+  const css = 'btn btn-primary font-bold gap-2 shadow  normal-case';
+  const dIcon = <MdOutlineFileDownload className="w-6 h-6" />;
+  return d ? (
+    <button
+      className={css}
+      onClick={() => {
+        download(os);
+      }}
+    >
+      {dIcon}
+      {`Download for ${os}`}
+    </button>
+  ) : (
+    <Link href="#download" scroll={false} className={css}>
+      {dIcon}
+      Download now
+    </Link>
+  );
+}
+
+export function Hero({ uaString }: { uaString: string }) {
+  const os = useUserAgent(uaString).os;
+
   return (
     <div className="hero bg-base-200 pt-28 pb-4 xl:pt-32 xl:pb-20">
       <div className="custom-container container flex flex-col gap-12 xl:flex-row-reverse xl:gap-24">
@@ -33,13 +62,7 @@ export function Hero() {
             experience a new and refreshing form of control!
           </p>
           <div className="flex gap-2">
-            <button
-              className="btn btn-primary font-bold gap-2 shadow  normal-case"
-              suppressHydrationWarning={true}
-            >
-              <MdOutlineFileDownload className="w-6 h-6" />
-              {`Download ${agent.search('Windows') ? 'for Windows' : 'now!'}`}
-            </button>
+            <DownloadButton os={os} />
             <Link
               href={selfHostLink}
               target="_blank"

@@ -1,8 +1,11 @@
+import { useUserAgent } from 'next-useragent';
 import Link from 'next/link';
 import { FaApple, FaLinux, FaWindows } from 'react-icons/fa';
 import { selfHostLink } from '../config/constants';
+import { download } from '../utils/downloadHelper';
 
-export default function DownloadSection() {
+export default function DownloadSection({ uaString }: { uaString: string }) {
+  const os = useUserAgent(uaString).os;
   return (
     <div
       id="download"
@@ -13,11 +16,21 @@ export default function DownloadSection() {
           Ready to download?
         </h2>
         <div className="flex flex-col gap-6 md:flex-row">
-          <button className="btn gap-2 normal-case">
+          <button
+            onClick={() => {
+              download(os);
+            }}
+            className="btn gap-2 normal-case"
+          >
             <FaWindows className="w-5 h-5" />
             Windows
           </button>
-          <button className="btn gap-2 normal-case">
+          <button
+            className="btn gap-2 normal-case"
+            onClick={() => {
+              download(os);
+            }}
+          >
             <FaApple className="w-5 h-5" />
             macOs
           </button>
