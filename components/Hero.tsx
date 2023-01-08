@@ -44,8 +44,8 @@ export function Hero({ uaString }: { uaString: string }) {
           alt=""
           src="/images/screenshots/ddd.png"
           className="lg:rounded-lg rounded-md shadow-2xl"
-          width={1600}
-          height={1200}
+          width={761}
+          height={670}
         />
         <div>
           <h1 className="text-5xl font-bold">
