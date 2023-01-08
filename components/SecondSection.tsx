@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export function SecondSection() {
   return (
     <div
@@ -12,7 +14,14 @@ export function SecondSection() {
           <u>No.</u>
         </h3>
         <p className="mx-auto max-w-lg">
-          Gryt is an <a className="link link-primary">open source</a>{' '}
+          Gryt is an{' '}
+          <Link
+            href="https://github.com/Gryta-Krutt/home"
+            target="_blank"
+            className="link link-primary"
+          >
+            open source
+          </Link>{' '}
           alternative to discord that allows you to be <b>in control</b>. No
           more limiting stream quality and emotes behind a paywall! The aim is
           to give you full control while still offering good <b>quality</b> and
