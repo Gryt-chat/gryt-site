@@ -10,7 +10,7 @@ function DownloadButton({ os }: { os: string }) {
   const [d, setD] = useState('');
 
   useEffect(() => {
-    const a = downloadLinks[os];
+    const a = downloadLinks[os.toLowerCase()];
     if (a) setD(a);
   }, []);
 
@@ -65,7 +65,7 @@ export function Hero({ uaString }: { uaString: string }) {
             <DownloadButton os={os} />
             <Link
               href={selfHostLink}
-              target="_blank"
+              target="_self"
               className="btn btn-ghost  normal-case"
             >
               Self Host
