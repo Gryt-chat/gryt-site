@@ -49,11 +49,7 @@ export default function DownloadSection({ uaString }: { uaString: string }) {
           </button>
           {/* </div> */}
         </div>
-        <Link
-          href={selfHostLink}
-          target="_blank"
-          className="Link text-gray-500"
-        >
+        <Link href={selfHostLink} target="_self" className="Link text-gray-500">
           Self Hosting
         </Link>
       </div>
