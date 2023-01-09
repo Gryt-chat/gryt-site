@@ -34,15 +34,20 @@ export default function DownloadSection({ uaString }: { uaString: string }) {
             <FaApple className="w-5 h-5" />
             macOs
           </button>
-          <div
+          {/* <div
             className="tooltip tooltip-bottom"
             data-tip="The client does not currently support Linux"
+          > */}
+          <button
+            className="btn gap-2 normal-case"
+            onClick={() => {
+              download(os);
+            }}
           >
-            <button disabled className="btn btn-primary gap-2 normal-case">
-              <FaLinux className="w-5 h-5" />
-              Linux
-            </button>
-          </div>
+            <FaLinux className="w-5 h-5" />
+            Linux
+          </button>
+          {/* </div> */}
         </div>
         <Link
           href={selfHostLink}
