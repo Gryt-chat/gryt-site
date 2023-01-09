@@ -18,12 +18,12 @@ export function Navbar() {
         <ul className="flex items-center gap-2">
           <li>
             <Link
-              href="https://gryt-docs.vercel.app/"
+              href="https://docs.gryt.chat/"
               target="_blank"
               className="btn btn-ghost gap-2 normal-case"
             >
               <BsBook className="w-4 h-4" />
-              Documentation
+              Docs
             </Link>
             <Link
               href="https://github.com/Gryta-Krutt/home"
