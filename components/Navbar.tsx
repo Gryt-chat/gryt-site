@@ -19,7 +19,7 @@ export function Navbar() {
           <li>
             <Link
               href="https://docs.gryt.chat/"
-              target="_blank"
+              target="_self"
               className="btn btn-ghost gap-2 normal-case"
             >
               <BsBook className="w-4 h-4" />
