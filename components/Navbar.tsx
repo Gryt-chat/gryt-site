@@ -15,35 +15,31 @@ export function Navbar() {
             {appName}
           </Link>
         </div>
-        <ul className="flex items-center gap-2">
-          <li>
-            <Link
-              href="https://docs.gryt.chat/"
-              target="_self"
-              className="btn btn-ghost gap-2 normal-case"
-            >
-              <BsBook className="w-4 h-4" />
-              Docs
-            </Link>
-            <Link
-              href="https://github.com/Gryta-Krutt/home"
-              target="_blank"
-              className="btn btn-ghost gap-2 normal-case"
-            >
-              <BsGithub className="w-4 h-4" />
-              GitHub
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#download"
-              scroll={false}
-              className="btn btn-ghost normal-case"
-            >
-              Download
-            </Link>
-          </li>
-        </ul>
+        <div className="flex items-center gap-2">
+          <Link
+            href="https://docs.gryt.chat/"
+            target="_self"
+            className="btn btn-ghost gap-2 normal-case"
+          >
+            <BsBook className="w-4 h-4" />
+            Docs
+          </Link>
+          <Link
+            href="https://github.com/Gryta-Krutt/home"
+            target="_blank"
+            className="btn btn-ghost gap-2 normal-case"
+          >
+            <BsGithub className="w-4 h-4" />
+            GitHub
+          </Link>
+          <Link
+            href="#download"
+            scroll={false}
+            className="btn btn-ghost normal-case"
+          >
+            Download
+          </Link>
+        </div>
       </div>
     </div>
   );
