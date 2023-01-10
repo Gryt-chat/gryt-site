@@ -17,7 +17,7 @@ export function Navbar() {
         </div>
         <div className="flex items-center gap-2">
           <Link
-            href="https://docs.gryt.chat/"
+            href="https://docs.gryt.chat"
             target="_self"
             className="btn btn-ghost gap-2 normal-case"
           >
@@ -25,8 +25,8 @@ export function Navbar() {
             Docs
           </Link>
           <Link
-            href="https://github.com/Gryta-Krutt/home"
-            target="_blank"
+            href="https://github.com/Gryt-chat"
+            target="_self"
             className="btn btn-ghost gap-2 normal-case"
           >
             <BsGithub className="w-4 h-4" />
