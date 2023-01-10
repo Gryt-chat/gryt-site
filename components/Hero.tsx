@@ -17,15 +17,21 @@ function DownloadButton({ os }: { os: string }) {
   const css = 'btn btn-primary font-bold gap-2 shadow  normal-case';
   const dIcon = <MdOutlineFileDownload className="w-6 h-6" />;
   return d ? (
-    <button
-      className={css}
-      onClick={() => {
-        download(os);
-      }}
+    <div
+      className="tooltip tooltip-bottom"
+      data-tip="Gryt is not publicly available yet. Follow our GitHub page for updates!"
     >
-      {dIcon}
-      {`Download for ${os}`}
-    </button>
+      <button
+        disabled
+        className={css}
+        onClick={() => {
+          download(os);
+        }}
+      >
+        {dIcon}
+        {`Download for ${os}`}
+      </button>
+    </div>
   ) : (
     <Link href="#download" scroll={false} className={css}>
       {dIcon}

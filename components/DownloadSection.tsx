@@ -15,8 +15,12 @@ export default function DownloadSection({ uaString }: { uaString: string }) {
         <h2 className="text-4xl font-extrabold md:text-6xl">
           Ready to download?
         </h2>
-        <div className="flex flex-col gap-6 md:flex-row">
+        <div
+          className="flex flex-col gap-6 md:flex-row tooltip tooltip-bottom"
+          data-tip="Gryt is not publicly available yet. Follow our GitHub page for updates!"
+        >
           <button
+            disabled
             onClick={() => {
               download(os);
             }}
@@ -26,6 +30,7 @@ export default function DownloadSection({ uaString }: { uaString: string }) {
             Windows
           </button>
           <button
+            disabled
             className="btn gap-2 normal-case"
             onClick={() => {
               download(os);
@@ -34,11 +39,8 @@ export default function DownloadSection({ uaString }: { uaString: string }) {
             <FaApple className="w-5 h-5" />
             macOs
           </button>
-          {/* <div
-            className="tooltip tooltip-bottom"
-            data-tip="The client does not currently support Linux"
-          > */}
           <button
+            disabled
             className="btn gap-2 normal-case"
             onClick={() => {
               download(os);
@@ -47,7 +49,6 @@ export default function DownloadSection({ uaString }: { uaString: string }) {
             <FaLinux className="w-5 h-5" />
             Linux
           </button>
-          {/* </div> */}
         </div>
         <Link href={selfHostLink} target="_self" className="Link text-gray-500">
           Self Hosting
