@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { githubLink } from '../config/constants';
 
 export function SecondSection() {
   return (
@@ -16,7 +17,7 @@ export function SecondSection() {
         <p className="mx-auto max-w-lg">
           Gryt is an{' '}
           <Link
-            href="https://github.com/Gryta-Krutt"
+            href={githubLink}
             target="_blank"
             className="link link-primary"
           >

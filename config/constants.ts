@@ -7,3 +7,4 @@ export const downloadLinks: downloadLinkType = {
     'mac os': '#macos',
     'linux': '#linux',
 } as const
+export const githubLink = 'https://github.com/Gryt-chat' as const
