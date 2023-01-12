@@ -56,7 +56,7 @@ export function Hero({ uaString }: { uaString: string }) {
         <div>
           <h1 className="text-5xl font-bold">
             A{' '}
-            <span className="text-gradient bg-gradient-to-t from-pink-300 to-purple-500">
+            <span className="text-gradient bg-gradient-to-b from-primary to-secondary">
               brand new
             </span>{' '}
             <br />
