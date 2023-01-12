@@ -16,17 +16,13 @@ export function SecondSection() {
         </h3>
         <p className="mx-auto max-w-lg">
           Gryt is an{' '}
-          <Link
-            href={githubLink}
-            target="_blank"
-            className="link link-primary"
-          >
+          <Link href={githubLink} target="_blank" className="link link-primary">
             open source
           </Link>{' '}
           alternative to discord that allows you to be <b>in control</b>. No
           more limiting stream quality and emotes behind a paywall! The aim is
-          to give you full control while still offering good <b>quality</b> and
-          high <b>security</b>.
+          to give you full control of your data while still offering good{' '}
+          <b>quality</b> and high <b>security</b>.
         </p>
       </div>
     </div>
