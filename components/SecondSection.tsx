@@ -3,10 +3,7 @@ import { githubLink } from '../config/constants';
 
 export function SecondSection() {
   return (
-    <div
-      id="anotherCopy?"
-      className="hero bg-base-100 text-neutral-content min-h-screen"
-    >
+    <div id="anotherCopy?" className="hero bg-base-100 min-h-screen">
       <div className="grid custom-container container mx-auto text-center">
         <h2 className="text-4xl font-extrabold md:text-6xl">
           Another discord copy?
