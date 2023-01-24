@@ -1,20 +1,20 @@
-import Image from "next/image";
-import Link from "next/link";
-import { MdOutlineFileDownload } from "react-icons/md";
-import { downloadLinks, selfHostLink } from "../config/constants";
-import { useUserAgent } from "next-useragent";
-import { useEffect, useState } from "react";
-import { download } from "../utils/downloadHelper";
+import Image from 'next/image';
+import Link from 'next/link';
+import { MdOutlineFileDownload } from 'react-icons/md';
+import { downloadLinks, selfHostLink } from '../config/constants';
+import { useUserAgent } from 'next-useragent';
+import { useEffect, useState } from 'react';
+import { download } from '../utils/downloadHelper';
 
 function DownloadButton({ os }: { os: string }) {
-  const [d, setD] = useState("");
+  const [d, setD] = useState('');
 
   useEffect(() => {
     const a = downloadLinks[os.toLowerCase()];
     if (a) setD(a);
   }, []);
 
-  const css = "btn btn-primary font-bold gap-2 shadow  normal-case";
+  const css = 'btn btn-primary font-bold gap-2 shadow  normal-case';
   const dIcon = <MdOutlineFileDownload className="w-6 h-6" />;
   return d ? (
     <div
@@ -55,10 +55,10 @@ export function Hero({ uaString }: { uaString: string }) {
         />
         <div>
           <h1 className="text-5xl font-bold">
-            A{" "}
+            A{' '}
             <span className="text-gradient bg-gradient-to-b from-primary to-accent">
               brand new
-            </span>{" "}
+            </span>{' '}
             <br />
             chat platform
           </h1>
