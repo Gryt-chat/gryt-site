@@ -36,4 +36,23 @@
 html, body {
   scroll-behavior: smooth;
   font-family: 'Rubik', sans-serif;
+  scrollbar-color: hsl(var(--p)) hsl(var(--b3));
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsl(var(--b3));
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--p));
+  border-radius: 4px;
 }
