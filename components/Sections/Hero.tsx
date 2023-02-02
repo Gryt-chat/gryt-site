@@ -45,7 +45,28 @@ export function Hero({ uaString }: { uaString: string }) {
 
   return (
     <div className="hero bg-base-200 pt-28 pb-4 xl:pt-32 xl:pb-20">
-      <div className="custom-container container flex flex-col-reverse gap-12">
+      <div className="custom-container container flex flex-col gap-6">
+        <h1 className="text-5xl font-bold">
+          A{' '}
+          <span className="text-gradient bg-gradient-to-b from-primary to-accent">
+            brand new
+          </span>{' '}
+          chat platform
+        </h1>
+        <p>
+          Say goodbye to outdated chat platforms; Welcome Gryt, the new standard
+          in secure, customizable communication.
+        </p>
+        <div className="flex gap-2">
+          <DownloadButton os={os} />
+          <Link
+            href={selfHostLink}
+            target="_self"
+            className="btn btn-ghost  normal-case"
+          >
+            Self Host
+          </Link>
+        </div>
         <Image
           alt=""
           src="/images/screenshots/server.avif"
@@ -53,29 +74,6 @@ export function Hero({ uaString }: { uaString: string }) {
           width={1920}
           height={1080}
         />
-        <div className="flex flex-col gap-6">
-          <h1 className="text-5xl font-bold">
-            A{' '}
-            <span className="text-gradient bg-gradient-to-b from-primary to-accent">
-              brand new
-            </span>{' '}
-            chat platform
-          </h1>
-          <p>
-            Say goodbye to outdated chat platforms; Welcome Gryt, the new
-            standard in secure, customizable communication.
-          </p>
-          <div className="flex gap-2">
-            <DownloadButton os={os} />
-            <Link
-              href={selfHostLink}
-              target="_self"
-              className="btn btn-ghost  normal-case"
-            >
-              Self Host
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   );
