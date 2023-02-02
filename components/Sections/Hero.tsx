@@ -68,7 +68,7 @@ export function Hero({ uaString }: { uaString: string }) {
           </Link>
         </div>
         <Image
-          alt=""
+          alt="An early mockup of the Gryt chat client"
           src="/images/screenshots/server.avif"
           className="lg:rounded-lg rounded-md shadow-2xl w-full"
           width={1920}
