@@ -1,8 +1,8 @@
 import { useUserAgent } from 'next-useragent';
 import Link from 'next/link';
 import { FaApple, FaLinux, FaWindows } from 'react-icons/fa';
-import { selfHostLink } from '../config/constants';
-import { download } from '../utils/downloadHelper';
+import { selfHostLink } from '../../config/constants';
+import { download } from '../../utils/downloadHelper';
 
 export default function DownloadSection({ uaString }: { uaString: string }) {
   const os = useUserAgent(uaString).os;
@@ -11,7 +11,7 @@ export default function DownloadSection({ uaString }: { uaString: string }) {
       id="download"
       className="hero bg-base-200 text-neutral-content min-h-screen"
     >
-      <div className="custom-container container mx-auto text-center grid gap-12">
+      <div className="custom-container container mx-auto text-center grid gap-12 place-items-center">
         <h2 className="text-4xl font-extrabold md:text-6xl">
           Ready to download?
         </h2>

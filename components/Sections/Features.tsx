@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FeatureCard } from './FeatureCard';
+import { FeatureCard } from '../FeatureCard';
 import {
   IoBrowsersOutline,
   IoHeart,

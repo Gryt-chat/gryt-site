@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { githubLink } from '../config/constants';
+import { githubLink } from '../../config/constants';
 
 export function SecondSection() {
   return (

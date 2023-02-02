@@ -2,21 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-#__next {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-width: 100vh;
-}
-
 @media screen and (max-width: 320px) {
   #__next {
-    display: flex
+    display: flex;
   }
 }
 
 .tooltip {
-  --tooltip-offset:calc(100% + 6px + var(--tooltip-tail,0px));
+  --tooltip-offset: calc(100% + 6px + var(--tooltip-tail, 0px));
   --tooltip-tail-offset: calc(100% + 6px - var(--tooltip-tail));
 }
 
@@ -29,13 +22,13 @@
 
 .custom-container {
   z-index: 0;
-  place-items: center;
   padding: 2rem;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   scrollbar-color: hsl(var(--p)) hsl(var(--b3));
 }
 

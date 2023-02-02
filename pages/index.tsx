@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import DownloadSection from '../components/DownloadSection';
+import DownloadSection from '../components/Sections/Download';
 import Footer from '../components/Footer';
-import { Hero } from '../components/Hero';
+import { Hero } from '../components/Sections/Hero';
 import { Navbar } from '../components/Navbar';
-import { SecondSection } from '../components/SecondSection';
-import { ThirdSection } from '../components/ThirdSection';
+import { SecondSection } from '../components/Sections/DiscordCopy';
+import { ThirdSection } from '../components/Sections/Features';
 
 export function getServerSideProps(context: any) {
   return {
