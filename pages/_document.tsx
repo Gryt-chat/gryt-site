@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   const description =
     "Introducing Gryt - the new chat platform that's revolutionizing the way we communicate. Gryt is open source, so you can see how it works and how it's been designed. Plus, there are no paywalls - so you can access all the features and content you need without having to pay a dime. Gryt is also focused on community contribution - so you can help shape the platform to your own needs. And best of all, Gryt is available now! So why wait? Join the community and start chatting today!";
-  const imagePreview = '/images/screenshot/server.png';
+  const imagePreview = '/images/screenshots/server.png';
   const site = 'https://gryt.chat';
   return (
     <Html
