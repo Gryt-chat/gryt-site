@@ -12,7 +12,13 @@ const icon = 'w-16 h-16 text-primary';
 const duck = (
   <div className="avatar flex">
     <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-      <Image alt="" width={256} height={256} src="/images/features/duck.avif" />
+      <Image
+        alt=""
+        width={256}
+        height={256}
+        src="/images/features/duck.gif"
+        quality={100}
+      />
     </div>
   </div>
 );

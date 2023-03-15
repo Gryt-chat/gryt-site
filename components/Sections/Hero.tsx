@@ -73,6 +73,7 @@ export function Hero({ uaString }: { uaString: string }) {
           className="lg:rounded-lg rounded-md shadow-2xl w-full"
           width={1920}
           height={1080}
+          quality={100}
         />
       </div>
     </div>
